@@ -16,4 +16,10 @@ public class CalcWindow {
            var currentNumberText = numberField.getText();
            numberField.setText(currentNumberText+buttonText);
     }
+
+    @FXML
+    public void clearButtonPressed(){
+        numberField.clear();
+    }
+
 }
