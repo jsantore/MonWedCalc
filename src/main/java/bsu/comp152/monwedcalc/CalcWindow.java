@@ -40,10 +40,32 @@ public class CalcWindow {
 
     @FXML
     public void plusPressed(){
-         var numberAsText = numberField.getText();
-         firstNumber = Long.parseLong(numberAsText);
-         numberField.setText("");
+         processNumber();
          operation = OperatorType.Add;
+    }
+
+    @FXML
+    public void minusPressed(){
+        processNumber();
+        operation = OperatorType.Subtract;
+    }
+
+    @FXML
+    public void multPressed(){
+        processNumber();
+        operation = OperatorType.Multiply;
+    }
+
+    @FXML
+    public void divPressed(){
+        processNumber();
+        operation = OperatorType.Divide;
+    }
+
+    private void processNumber(){
+        var numberAsText = numberField.getText();
+        firstNumber = Long.parseLong(numberAsText);
+        numberField.setText("");
     }
 
 }
